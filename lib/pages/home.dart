@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
+import 'package:flutter/services.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -11,14 +13,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold();
-    }
+  }
 
-    Future<void> readJsonFile() async{
-      final String fileData = await rootBundle.loadString('assets/books.json');
-      final stringData = await json.decode(fileData);
-print(stringData);
-    }
+  Future<void> readJsonFile() async {
+    final String fileData = await rootBundle.loadString('assets/books.json');
+    final stringData = await json.decode(fileData);
+    print(stringData);
+  }
 }
