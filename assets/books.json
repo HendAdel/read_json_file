@@ -1,0 +1,16 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "name": "Clean Code"
+        },
+        {
+            "id": 2,
+            "name": "Code Complete"
+        },
+        {
+            "id": 3,
+            "name": "Introduction to Algorithms"
+        }
+    ]
+}
