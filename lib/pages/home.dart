@@ -15,7 +15,32 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Home Page"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const Text("Read Json file data"),
+            ElevatedButton(
+              onPressed: readJsonFile,
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  fixedSize: const Size(double.maxFinite, 30),
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white),
+              child: const Text(
+                "Print",
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 
   Future<void> readJsonFile() async {
